@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import com.bk.bkompose.ui.components.BaseScreen
 import com.bk.bkompose.ui.theme.BKomposeTheme
+import com.bk.bkompose.ui.theme.Theme
 
 @Composable
 fun MainScreen(
@@ -29,6 +31,10 @@ fun MainScreen(
         ) {
             Button(
                 onClick = onNavigateToSample,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Theme.colors.primary,
+                    contentColor = Theme.colors.onPrimary.default
+                ),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(text = "Basic Animation Sample")
