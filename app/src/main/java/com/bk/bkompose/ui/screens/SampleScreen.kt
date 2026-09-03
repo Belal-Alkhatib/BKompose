@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.bk.bkompose.ui.components.BaseScreen
 import com.bk.bkompose.ui.theme.BKomposeTheme
+import com.bk.bkompose.ui.theme.Theme
 
 @Composable
 fun SampleScreen() {
@@ -20,7 +21,8 @@ fun SampleScreen() {
         ) {
             Text(
                 text = "Animation content will go here",
-                style = MaterialTheme.typography.headlineMedium
+                style = MaterialTheme.typography.headlineMedium,
+                color = Theme.colors.primary
             )
         }
     }
